@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arulnithi & Surya — Wedding Invitation</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FLOATING PARTICLES CANVAS -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- HIDDEN YOUTUBE BACKGROUND PLAYER -->
+  <div id="youtube-player-container" style="position:fixed; width:1px; height:1px; left:-9999px; top:-9999px; opacity:0; pointer-events:none;">
+    <div id="player"></div>
+  </div>
+
+  <!-- FLOATING MUSIC TOGGLE BUTTON -->
+  <div class="music-toggle">
+    <button id="music-btn" aria-label="Toggle music" type="button">
+      <span class="music-icon">♪</span>
+    </button>
+  </div>
+
+  <!-- OPENING SCREEN -->
+  <section class="opening" id="opening-screen">
+    <div class="opening-glow"></div>
+    <div class="opening-content">
+      <p class="opening-sub">A little invitation</p>
+      <h1 class="opening-title">A big beginning</h1>
+
+      <div class="opening-heart-wrap">
+        <div class="glow-disc"></div>
+        <div class="glow-ring ring-1"></div>
+        <div class="glow-ring ring-2"></div>
+        <div class="glow-ring ring-3"></div>
+        <div class="heart-center">♥</div>
+      </div>
+
+      <button type="button" class="btn-open-invite" id="btn-open-invite">
+        OPEN INVITATION
+      </button>
+    </div>
+  </section>
+
+  <!-- MAIN INVITATION SITE -->
+  <main id="main-site" class="main-site hidden-init">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="hero-bg">
+        <img src="assets/photo1.jpg" alt="Arulnithi & Surya" class="hero-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content reveal-item">
+        <p class="hero-lead">You are invited to celebrate</p>
+        <h1 class="hero-names">
+          <span>Arulnithi</span>
+          <span class="hero-amp">&amp;</span>
+          <span>Surya</span>
+        </h1>
+        <p class="hero-caption">Our new beginning</p>
+        <p class="hero-date">25 · October · 2026</p>
+
+        <!-- EXACTLY BELOW THE DATE -->
+        <div class="scroll-explore">
+          <span>Scroll to explore</span>
+          <div class="scroll-indicator">
+            <span class="scroll-dot"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- OUR STORY -->
+    <section class="section-wrap story-wrap">
+      <div class="content-box reveal-item">
+        <p class="section-tag">A beautiful</p>
+        <h2 class="section-head">beginning</h2>
+        <p class="story-desc">
+          With hearts full of gratitude, we invite our family and friends
+          to be part of the next chapter of our love story. What began as
+          a quiet conversation has grown into a lifetime we cannot wait to share with you.
+        </p>
+        <p class="couple-signature">Arulnithi &amp; Surya</p>
+      </div>
+    </section>
+
+    <!-- SAVE THE DATE / COUNTDOWN -->
+    <section class="section-wrap timer-wrap">
+      <div class="content-box reveal-item">
+        <p class="section-tag">Our big day</p>
+        <h2 class="section-head">Save the Date</h2>
+
+        <div class="timer-display" aria-live="polite">
+          <div class="timer-box">
+            <span class="time-digit" id="timer-days">00</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="timer-box">
+            <span class="time-digit" id="timer-hours">00</span>
+            <span class="time-label">Hours</span>
+          </div>
+          <div class="timer-box">
+            <span class="time-digit" id="timer-minutes">00</span>
+            <span class="time-label">Minutes</span>
+          </div>
+          <div class="timer-box">
+            <span class="time-digit" id="timer-seconds">00</span>
+            <span class="time-label">Seconds</span>
+          </div>
+        </div>
+
+        <p class="timer-subtext">until we say “I do”</p>
+      </div>
+    </section>
+
+    <!-- EVENT DETAILS -->
+    <section class="section-wrap events-wrap">
+      <div class="content-box">
+        <div class="reveal-item">
+          <p class="section-tag">The celebration</p>
+          <h2 class="section-head">Event Details</h2>
+        </div>
+
+        <!-- 01 RECEPTION -->
+        <div class="event-card reveal-item">
+          <div class="event-card-head">
+            <span class="event-index">01</span>
+            <h3 class="event-title">Reception</h3>
+            <p class="event-subtitle">A warm welcome</p>
+          </div>
+
+          <div class="event-columns">
+            <div class="col-item">
+              <span class="col-label">Date</span>
+              <span class="col-main">24 October 2026</span>
+              <span class="col-sub">Saturday</span>
+            </div>
+            <div class="col-item">
+              <span class="col-label">Time</span>
+              <span class="col-main">6:00 PM</span>
+              <span class="col-sub">Evening</span>
+            </div>
+            <div class="col-item">
+              <span class="col-label">Venue</span>
+              <span class="col-main">Selvam Mahal A/c</span>
+              <span class="col-sub">Mulanur</span>
+            </div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/WkeagVayUXEQbxtp6" target="_blank" rel="noopener noreferrer" class="location-btn">
+            <span>View Location</span>
+            <i class="arr">↗</i>
+          </a>
+        </div>
+
+        <!-- 02 WEDDING / MUHURTHAM -->
+        <div class="event-card reveal-item">
+          <div class="event-card-head">
+            <span class="event-index">02</span>
+            <h3 class="event-title">Wedding</h3>
+            <p class="event-subtitle">The big day</p>
+          </div>
+
+          <div class="event-columns">
+            <div class="col-item">
+              <span class="col-label">Date</span>
+              <span class="col-main">25 October 2026</span>
+              <span class="col-sub">Sunday</span>
+            </div>
+            <div class="col-item">
+              <span class="col-label">Time</span>
+              <span class="col-main">6:00 AM</span>
+              <span class="col-sub">Morning Muhurtham</span>
+            </div>
+            <div class="col-item">
+              <span class="col-label">Venue</span>
+              <span class="col-main">Muthusamy Temple</span>
+              <span class="col-sub">Puduppai</span>
+            </div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/fqdwSN71j3e1MPhV6?g_st=ac" target="_blank" rel="noopener noreferrer" class="location-btn">
+            <span>View Location</span>
+            <i class="arr">↗</i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="section-wrap gallery-wrap">
+      <div class="content-box">
+        <div class="reveal-item">
+          <p class="section-tag">Photo gallery</p>
+          <h2 class="section-head">Moments we treasure</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal-item"><img src="assets/photo1.jpg" alt="Moment 1" loading="lazy"></div>
+          <div class="gallery-item reveal-item"><img src="assets/photo2.jpg" alt="Moment 2" loading="lazy"></div>
+          <div class="gallery-item reveal-item"><img src="assets/photo3.jpg" alt="Moment 3" loading="lazy"></div>
+          <div class="gallery-item reveal-item"><img src="assets/photo4.jpg" alt="Moment 4" loading="lazy"></div>
+          <div class="gallery-item reveal-item"><img src="assets/photo5.jpg" alt="Moment 5" loading="lazy"></div>
+          <div class="gallery-item reveal-item"><img src="assets/photo6.jpg" alt="Moment 6" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTIONS -->
+    <section class="section-wrap directions-wrap">
+      <div class="content-box reveal-item">
+        <p class="section-tag">Find your way</p>
+        <h2 class="section-head">Directions</h2>
+
+        <div class="directions-card">
+          <div class="map-icon">📍</div>
+          <p class="directions-venue">Selvam Mahal A/c</p>
+          <p class="directions-area">Mulanur</p>
+          <a href="https://maps.app.goo.gl/WkeagVayUXEQbxtp6" target="_blank" rel="noopener noreferrer" class="location-btn">
+            <span>Open in Google Maps</span>
+            <i class="arr">↗</i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CLOSING -->
+    <footer class="final-wrap">
+      <div class="final-bg">
+        <img src="assets/photo6.jpg" alt="Arulnithi & Surya" class="final-bg-img">
+        <div class="final-overlay"></div>
+      </div>
+
+      <div class="content-box final-inner reveal-item">
+        <p class="section-tag tag-white">With love</p>
+        <h2 class="final-title">We can’t wait to<br>celebrate with you</h2>
+        <p class="final-desc">
+          Your presence would mean the world to us as we begin this beautiful
+          journey together. Come celebrate, laugh, and dance the night away.
+        </p>
+        <p class="final-couple">Arulnithi &amp; Surya</p>
+        <p class="final-footer-text">Made with love, for a beginning worth celebrating.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
