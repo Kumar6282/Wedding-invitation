@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
   // 5. Live Countdown Timer to 25 Oct 2026, 06:00 AM IST
-  const weddingTarget = new Date("2026-10-25T06:00:00+05:30").getTime();
+  const weddingTarget = new Date("2026-11-15T04:00:00+05:30").getTime();
   const daysEl = document.getElementById("timer-days");
   const hoursEl = document.getElementById("timer-hours");
   const minsEl = document.getElementById("timer-minutes");
