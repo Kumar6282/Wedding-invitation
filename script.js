@@ -6,12 +6,12 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '1',
     width: '1',
-    videoId: 'HsXMUmSxcB8', // Eppadi Vandhaayo Song
+    videoId: 'gzfpZ6P7ba5d-ca', // Eppadi Vandhaayo Song
     playerVars: {
       autoplay: 0,
       controls: 0,
       loop: 1,
-      playlist: 'r3oAMDsC-8Y',
+      playlist: 'gzfpZ6P7ba5d-ca',
       playsinline: 1,
       rel: 0
     },
